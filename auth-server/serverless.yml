@@ -20,6 +20,6 @@ functions:
   getAccessToken:
     handler: handler.getAccessToken
     events:
-      -http:
+      - http:
         path: api/token/{code}
         method: get
