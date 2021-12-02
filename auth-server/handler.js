@@ -38,7 +38,7 @@ module.exports.getAuthURL = async () => {
   };
 };
 
-module.exports.getAccesstoken = async (event) => {
+module.exports.getAccessToken = async (event) => {
   //values used to initiate oAuth2Client are at top of the file
   const oAuth2Client = new google.auth.OAuth2(
     client_id,
@@ -46,6 +46,7 @@ module.exports.getAccesstoken = async (event) => {
     redirect_uris[0]
   );
   //decode auth code extracted from URL query
+  console.log(event);
   const code = decodeURIComponent(`${event.pathParameters.code}`);
 
   return new Promise((resolve, reject) => {

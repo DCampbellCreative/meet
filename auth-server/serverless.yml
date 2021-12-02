@@ -21,5 +21,7 @@ functions:
     handler: handler.getAccessToken
     events:
       - http:
-        path: api/token/{code}
-        method: get
+          path: api/token/{code}
+          method: get
+          cors:
+            origin: '*'
