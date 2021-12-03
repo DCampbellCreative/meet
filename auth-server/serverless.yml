@@ -25,3 +25,11 @@ functions:
           method: get
           cors:
             origin: '*'
+  getCalendarEvents:
+    handler: handler.getCalendarEvents
+    events:
+      - http:
+          path: api/get-events/{access_token}
+          method: get
+          cors:
+            origin: '*'
