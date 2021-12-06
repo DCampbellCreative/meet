@@ -6,6 +6,7 @@ class CitySearch extends Component {
 		query: '',
 		suggestions: []
 	}
+
 	handleInputChanged = (event) => {
 		const value = event.target.value;
 		const suggestions = this.props.locations.filter((location) => {
@@ -16,6 +17,13 @@ class CitySearch extends Component {
 			suggestions,
 		});
 	}
+
+	handleItemClicked = (suggestion) => {
+		this.setState({
+			query: suggestion
+		})
+	}
+
 	render() {
 		return (
 			<div className="CitySearch">
@@ -27,7 +35,9 @@ class CitySearch extends Component {
 				/>
 				<ul className="suggestions">
 					{this.state.suggestions.map((suggestion) => (
-						<li key={suggestion}>{suggestion}</li>
+						<li key={suggestion}
+							onClick={() => this.handleItemClicked(suggestion)}
+						>{suggestion}</li>
 					))}
 					<li key='all'>
 						<b>See all cities</b>
