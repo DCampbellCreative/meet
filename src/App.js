@@ -1,18 +1,36 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 
 import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
+import { render } from 'enzyme';
+import { getEvents } from './api';
 
-function App() {
-  return (
-    <div className="App">
-      <CitySearch />
-      <NumberOfEvents />
-      <EventList />
-    </div>
-  );
+class App extends Component {
+  state = {
+    events: [],
+    locations: []
+  }
+
+  updateEvents = (location) => {
+    getEvents().then((events) => {
+      const locationEvents = events.filter((event) => event.location === location);
+      this.setState({
+        events: locationEvents
+      });
+    });
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
+        <NumberOfEvents />
+        <EventList events={this.state.events} />
+      </div>
+    );
+  }
 }
 
 export default App;
