@@ -17,7 +17,6 @@ class NumberOfEvents extends Component {
 				className="number-input"
 				value={this.state.numberOfEvents}
 				onChange={this.handleInputChanged}
-				onFocus={() => { this.setState({ numberOfEvents: value }) }}
 			/>
 		</div>;
 	}
