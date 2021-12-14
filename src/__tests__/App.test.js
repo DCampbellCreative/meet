@@ -29,7 +29,7 @@ describe('<App /> component', () => {
 	});
 });
 
-//integration test
+//integration tests
 describe('<App /> integration', () => {
 
 	test('App passes "events" state as a prop to EventList', () => {
@@ -48,12 +48,11 @@ describe('<App /> integration', () => {
 		AppWrapper.unmount();
 	});
 
-	//FAILS
 	test('App passes "numberOfEvents" state as a prop to NumberOfEvents', () => {
 		const AppWrapper = mount(<App />);
 		const AppNumberOfEventsState = AppWrapper.state('numberOfEvents');
 		expect(AppNumberOfEventsState).not.toEqual(undefined);
-		expect(AppWrapper.find(NumberOfEvents).props().events).toEqual(AppNumberOfEventsState);
+		expect(AppWrapper.find(NumberOfEvents).props().numberOfEvents).toEqual(AppNumberOfEventsState);
 		AppWrapper.unmount();
 	});
 
@@ -80,5 +79,22 @@ describe('<App /> integration', () => {
 		expect(AppWrapper.state('events')).toEqual(allEvents);
 		AppWrapper.unmount();
 	})
+
+	//current test
+	// test('changes number of events when user selects a different number', async () => {
+	// 	const AppWrapper = mount(<App />);
+	// 	const NumberOfEventsWrapper = AppWrapper.find(NumberOfEvents);
+	// 	const events = extractEvents(mockData);
+	// 	NumberOfEventsWrapper.setState({ numberOfEvents: value });
+	// 	const value = NumberOfEventsWrapper.state('numberOfEvents');
+
+	// 	const selectedIndex = Math.floor(Math.random() * (suggestions.length));
+	// 	const selectedCity = suggestions[selectedIndex];
+	// 	await CitySearchWrapper.instance().handleItemClicked(selectedCity);
+	// 	const allEvents = await getEvents();
+	// 	const eventsToShow = allEvents.filter(event => event.location === selectedCity);
+	// 	expect(AppWrapper.state('events')).toEqual(eventsToShow);
+	// 	AppWrapper.unmount();
+	// })
 
 });

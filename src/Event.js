@@ -13,7 +13,7 @@ class Event extends Component {
 
 
 		return (
-			<div>
+			<div className="event">
 				<h1 className="summary">{event.summary}</h1>
 				<p className="start">{event.start.dateTime}</p>
 				<p className="organizer">{event.organizer.email}</p>
