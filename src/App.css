@@ -5,6 +5,8 @@
   text-align: center;
   padding: 2% 5%;
   font-family: 'Source Sans 3', sans-serif;
+  background-image: linear-gradient(to right, rgb(200, 255, 200), white);
+
 }
 
 .App * {
@@ -34,7 +36,7 @@ input[type="number"] {
   margin: 10px;
   border-radius: 4px;
   outline: none;
-  border: 2px solid #ccc;
+  border: 2px solid rgb(228, 228, 228);
   font-size: 14px;
   line-height: 20px;
   align-self: center;
@@ -82,12 +84,14 @@ input[type="number"] {
 }
 
 .event {
+  display: inline-block;
   padding: 10px 10px 35px;
   margin-bottom: 10px;
   text-align: left;
   border-radius: 4px;
   position: relative;
-  border: 1px solid rgb(124, 124, 124);
+  border: 2px solid rgb(228, 228, 228);
+  background: white;
   width: 500px;
   text-align: center;
 }
@@ -207,9 +211,18 @@ input[type="number"] {
 
 .details {
   margin: 5px;
-  border-radius: 1px;
-  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
+  /* border-radius: 1px;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25); */
   font-family: 'Source Sans 3', sans-serif;
+  color: rgb(78, 78, 78);
+   font-weight: 400;
+  background: rgb(200, 255, 200);
+  border-width: 0px;
+}
+
+.title{
+  font-size: 55px;
+  font-style: italic;
 }
 
 
