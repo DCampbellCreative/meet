@@ -79,22 +79,4 @@ describe('<App /> integration', () => {
 		expect(AppWrapper.state('events')).toEqual(allEvents);
 		AppWrapper.unmount();
 	})
-
-	//current test
-	// test('changes number of events when user selects a different number', async () => {
-	// 	const AppWrapper = mount(<App />);
-	// 	const NumberOfEventsWrapper = AppWrapper.find(NumberOfEvents);
-	// 	const events = extractEvents(mockData);
-	// 	NumberOfEventsWrapper.setState({ numberOfEvents: value });
-	// 	const value = NumberOfEventsWrapper.state('numberOfEvents');
-
-	// 	const selectedIndex = Math.floor(Math.random() * (suggestions.length));
-	// 	const selectedCity = suggestions[selectedIndex];
-	// 	await CitySearchWrapper.instance().handleItemClicked(selectedCity);
-	// 	const allEvents = await getEvents();
-	// 	const eventsToShow = allEvents.filter(event => event.location === selectedCity);
-	// 	expect(AppWrapper.state('events')).toEqual(eventsToShow);
-	// 	AppWrapper.unmount();
-	// })
-
 });
