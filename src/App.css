@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Source+Sans+3:wght@200;300;400&display=swap');
 
 .App {
   text-align: center;
@@ -91,9 +91,13 @@ input[type="number"] {
   border-radius: 4px;
   position: relative;
   border: 2px solid rgb(228, 228, 228);
-  background: white;
+  background: rgb(255, 255, 255, 0.5);
   width: 500px;
   text-align: center;
+}
+
+.event:hover {
+  background: rgb(255, 255, 255);
 }
 
 .details-btn {
@@ -218,11 +222,14 @@ input[type="number"] {
    font-weight: 400;
   background: rgb(200, 255, 200);
   border-width: 0px;
+  cursor: pointer;
 }
 
 .title{
-  font-size: 55px;
+  font-size: 100px;
+  font-family: 'Lobster', cursive;
   font-style: italic;
+  margin: 1rem;
 }
 
 
