@@ -5,7 +5,12 @@
   text-align: center;
   padding: 2% 5%;
   font-family: 'Source Sans 3', sans-serif;
+  
   background-image: linear-gradient(to right, rgb(200, 255, 200), white);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+   background-size: cover;
 
 }
 
@@ -220,7 +225,7 @@ input[type="number"] {
   font-family: 'Source Sans 3', sans-serif;
   color: rgb(78, 78, 78);
    font-weight: 400;
-  background: rgb(200, 255, 200);
+   background-image: linear-gradient(to top left, rgb(200, 255, 200), rgb(225, 255, 225));
   border-width: 0px;
   cursor: pointer;
 }
