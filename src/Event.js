@@ -20,7 +20,7 @@ class Event extends Component {
 				<p className="location">{event.location}</p>
 				<button className="details" onClick={this.handleChange}>{details ? 'Hide' : 'Show Details'}</button>
 				{
-					details && (<text className="description">{event.description}</text>)
+					details && (<p className="description">{event.description}</p>)
 				}
 			</div>
 		);

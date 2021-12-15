@@ -96,13 +96,9 @@ input[type="number"] {
   border-radius: 4px;
   position: relative;
   border: 2px solid rgb(228, 228, 228);
-  background: rgb(255, 255, 255, 0.5);
+  background: rgb(255, 255, 255);
   width: 500px;
   text-align: center;
-}
-
-.event:hover {
-  background: rgb(255, 255, 255);
 }
 
 .details-btn {
@@ -132,6 +128,7 @@ input[type="number"] {
 
 .description {
   overflow-x: hidden;
+  font-size: 12px;
 }
 
 .numberOfEvents {
@@ -223,11 +220,17 @@ input[type="number"] {
   /* border-radius: 1px;
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25); */
   font-family: 'Source Sans 3', sans-serif;
-  color: rgb(78, 78, 78);
+  color: rgb(61, 61, 61);
    font-weight: 400;
    background-image: linear-gradient(to top left, rgb(200, 255, 200), rgb(225, 255, 225));
-  border-width: 0px;
+  border: 1px solid rgb(228, 228, 228);
   cursor: pointer;
+  height: 30px;
+  width: 125px;
+}
+
+.details:hover {
+  filter: drop-shadow(3px 3px 2px darkgray);
 }
 
 .title{
