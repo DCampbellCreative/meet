@@ -25,19 +25,19 @@ defineFeature(feature, test => {
 	});
 
 	test('User can change the number of events they want to see', ({ given, when, then }) => {
-		let NumberOfEventsWrapper;
+		let AppWrapper;
 		given('The user changes the default amount of events displayed.', () => {
-			NumberOfEventsWrapper = shallow(<NumberOfEvents updateEvents={() => { }} />);
-			NumberOfEventsWrapper.find('.number-input').simulate('change', { target: { value: '2' } });
+			AppWrapper = mount(<App />)
 		});
 
 		when('The user is on the main page.', () => {
-			NumberOfEventsWrapper = shallow(<NumberOfEvents updateEvents={() => { }} />);
+			AppWrapper.find('.number-input').simulate('change', { target: { value: 2 } })
 		});
 
 		then('The user sees previews for the desired number of events.', () => {
-			expect(NumberOfEventsWrapper.find('.EventList')).toHaveLength(2);
+			expect(AppWrapper.state('numberOfEvents')).toBe(2);
 		});
+
 	});
 
 });
