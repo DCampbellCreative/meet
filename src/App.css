@@ -1,17 +1,17 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Source+Sans+3:wght@200;300;400&display=swap');
 
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  background-image: linear-gradient(to bottom right, rgb(200, 255, 200), white);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-attachment: fixed;
+}
+
 .App {
   text-align: center;
-  padding: 2% 5%;
-  font-family: 'Source Sans 3', sans-serif;
-  
-  background-image: linear-gradient(to right, rgb(200, 255, 200), white);
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-   background-size: cover;
-
+  padding: 2% 5%; 
 }
 
 .App * {
@@ -217,8 +217,6 @@ input[type="number"] {
 
 .details {
   margin: 5px;
-  /* border-radius: 1px;
-  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25); */
   font-family: 'Source Sans 3', sans-serif;
   color: rgb(61, 61, 61);
    font-weight: 400;
