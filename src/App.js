@@ -5,7 +5,6 @@ import './nprogress.css';
 import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
-import { render } from 'enzyme';
 import { extractLocations, getEvents } from './api';
 
 class App extends Component {
