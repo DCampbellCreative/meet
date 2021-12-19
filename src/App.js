@@ -50,14 +50,23 @@ class App extends Component {
     }
   };
 
+  showOnlineStatus = (event) => {
+    // let online = navigator.Online;
+    if (navigator.Online) {
+      this.setState({
+        infoText: 'You are offline'
+      });
+    } else {
+      this.setState({
+        infoText: ''
+      });
+    }
+  }
+
   render() {
     return (
       <div className="App">
-        {!navigator.onLine ? (
-          <InfoAlert text='YOU ARE OFFLINE' />
-        ) : (
-          ''
-        )}
+        <InfoAlert text={this.state.infoText} />
         <h1 className='title'>Meet</h1>
         <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
         <NumberOfEvents numberOfEvents={this.state.numberOfEvents} updateEvents={this.updateEvents} />
