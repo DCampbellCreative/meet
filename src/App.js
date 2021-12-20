@@ -14,6 +14,7 @@ class App extends Component {
     locations: [],
     numberOfEvents: 16,
     currentLocation: "all",
+    infoText: '',
   }
 
   componentDidMount() {
@@ -23,6 +24,7 @@ class App extends Component {
         this.setState({ events: events.slice(0, this.state.numberOfEvents), locations: extractLocations(events), });
       }
     });
+    this.showOnlineStatus();
   }
 
   componentWillUnmount() {
