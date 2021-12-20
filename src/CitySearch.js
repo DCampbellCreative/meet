@@ -35,7 +35,7 @@ class CitySearch extends Component {
 			query: suggestion,
 			suggestions: [],
 			showSuggestions: false,
-			infoText: ''
+			infoText: null
 		});
 		this.props.updateEvents(suggestion);
 	}
@@ -50,7 +50,7 @@ class CitySearch extends Component {
 					value={this.state.query}
 					onChange={this.handleInputChanged}
 					onFocus={() => this.setState({ showSuggestions: true })}
-					onBlur={() => this.setState({ showSuggestions: false })}
+				// onBlur={() => this.setState({ showSuggestions: false })}
 				/>
 				<ul className="suggestions" style={this.state.showSuggestions ? {} : { display: 'none' }}>
 					{this.state.suggestions.map((suggestion) => (
