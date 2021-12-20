@@ -51,8 +51,7 @@ class App extends Component {
   };
 
   showOnlineStatus = (event) => {
-    // let online = navigator.Online;
-    if (navigator.Online) {
+    if (!navigator.onLine) {
       this.setState({
         infoText: 'You are offline'
       });
